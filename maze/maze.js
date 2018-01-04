@@ -722,11 +722,36 @@ function searchBot(x, y) {
 				strokeWeight(1);
 				fill(0,0,0,0);
 
+				if(cy==ny && cy==py) {
+					line(cx*w, cy*w+w/2, (cx+1)*w, cy*w+w/2);
+				}
+				else if(cx==nx && cx==px) {
+					line(cx*w+w/2, cy*w, cx*w+w/2, (cy+1)*w);
+				}
+				else if((nx-cx==1 && cy-py==1) || (ny-cy==-1 && cx-px==-1)) { //For Lower Left
+					line(cx*w+w/2, cy*w, cx*w+w/2, cy*w+w/2);
+					line(cx*w+w/2, cy*w+w/2, (cx+1)*w, cy*w+w/2);
+				}
+				else if((nx-cx==-1 && cy-py==1) || (ny-cy==-1 && cx-px==1)) { //For Lower Right
+					line(cx*w+w/2, cy*w, cx*w+w/2, cy*w+w/2);
+					line(cx*w+w/2, cy*w+w/2, cx*w, cy*w+w/2);
+				}
+				else if((nx-cx==1 && cy-py==-1) || (ny-cy==1 && cx-px==-1)) { //For Upper Left
+					line(cx*w+w/2, cy*w+w/2, (cx+1)*w, cy*w+w/2);
+					line(cx*w+w/2, cy*w+w/2, cx*w+w/2, (cy+1)*w);
+				}
+				else if((nx-cx==-1 && cy-py==-1) || (ny-cy==1 && cx-px==1)) { //For Upper Right
+					line(cx*w, cy*w+w/2, cx*w+w/2, cy*w+w/2);		
+					line(cx*w+w/2, cy*w+w/2, cx*w+w/2, (cy+1)*w);
+				}
+
 				//noStroke();
 				//stroke(255, 255, 255, 40);
 				//strokeWeight(1);
 				//fill(0,0,0,0);
-				rect(cx*w+5, cy*w+5, w-10, w-10);
+
+
+				//rect(cx*w+5, cy*w+5, w-10, w-10);
 			}
 		}
 	}
