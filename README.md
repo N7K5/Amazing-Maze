@@ -14,6 +14,6 @@ Press SPACE to use MAP ( if you have one... )
 #### up, down, left, right arrow key to move
 #### S for screenshot
 #### M for mute
-#### T for trace a path...
+#### T to trace a path...
 
 ## happy playing
