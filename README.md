@@ -1,4 +1,5 @@
 # Amazing-Maze. (3D Version [Here](https://github.com/N7K5/maze3d "Maze 3d...").)
+# This one can be tried [Here](https://n7k5.github.io/Amazing-Maze/ "Amazing-Maze").
 A Simple Java script Based Maze game Which Uses P5.js Javascript Library and Backtracking Algorithm to generate maze...
 
 
